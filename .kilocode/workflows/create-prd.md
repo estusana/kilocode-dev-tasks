@@ -9,7 +9,7 @@ To guide an AI assistant in creating a detailed Product Requirements Document (P
 1. **Receive Initial Prompt:** The user provides a brief description or request for a new feature or functionality.
 2. **Ask Clarifying Questions:** Before writing the PRD, the AI _must_ ask clarifying questions to gather sufficient detail. The goal is to understand the "what" and "why" of the feature, not necessarily the "how" (which the developer will figure out).
 3. **Generate PRD:** Based on the initial prompt and the user's answers to the clarifying questions, generate a PRD using the structure outlined below.
-4. **Save PRD:** Save the generated document as `prd-[feature-name].md` inside the `/tasks` directory using the [`write_to_file`](write_to_file) tool.
+4. **Save PRD:** Save the generated document as `prd-[feature-name].md` inside the `/tasks` directory using the [`write_to_file`](https://kilocode.ai/docs/features/tools/write-to-file) tool.
 
 ## Clarifying Questions (Examples)
 
@@ -51,13 +51,13 @@ Assume the primary reader of the PRD is a **junior developer**. Therefore, requi
 
 ## Kilocode Tools to Use
 
-- Use [`ask_followup_question`](ask_followup_question) to gather clarifying information from the user
-- Use [`write_to_file`](write_to_file) to save the PRD document
-- Use [`read_file`](read_file) if you need to reference existing project files for context
+- Use [`ask_followup_question`](https://kilocode.ai/docs/features/tools/ask-followup-question) to gather clarifying information from the user
+- Use [`write_to_file`](https://kilocode.ai/docs/features/tools/write-to-file) to save the PRD document
+- Use [`read_file`](https://kilocode.ai/docs/features/tools/read-file) if you need to reference existing project files for context
 
 ## Final Instructions
 
 1. Do NOT start implementing the PRD
-2. Make sure to ask the user clarifying questions using the [`ask_followup_question`](ask_followup_question) tool
+2. Make sure to ask the user clarifying questions using the [`ask_followup_question`](https://kilocode.ai/docs/features/tools/ask-followup-question) tool
 3. Take the user's answers to the clarifying questions and improve the PRD
-4. Save the final PRD using [`write_to_file`](write_to_file) in the `/tasks/` directory
+4. Save the final PRD using [`write_to_file`](https://kilocode.ai/docs/features/tools/write-to-file) in the `/tasks/` directory

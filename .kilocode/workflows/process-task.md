@@ -25,22 +25,22 @@ Guidelines for managing task lists in markdown files to track progress on comple
 
 When working with task lists, the AI must:
 
-1. Regularly update the task list file after finishing any significant work using [`apply_diff`](apply_diff) or [`write_to_file`](write_to_file).
+1. Regularly update the task list file after finishing any significant work using [`apply_diff`](https://kilocode.ai/docs/features/tools/apply-diff) or [`write_to_file`](https://kilocode.ai/docs/features/tools/write-to-file).
 2. Follow the completion protocol:
    - Mark each finished **sub‑task** `[x]`.
    - Mark the **parent task** `[x]` once **all** its subtasks are `[x]`.
 3. Add newly discovered tasks.
 4. Keep "Relevant Files" accurate and up to date.
-5. Before starting work, check which sub‑task is next using [`read_file`](read_file).
+5. Before starting work, check which sub‑task is next using [`read_file`](https://kilocode.ai/docs/features/tools/read-file).
 6. After implementing a sub‑task, update the file and then pause for user approval.
 
 ## Kilocode Tools to Use
 
-- Use [`read_file`](read_file) to check the current state of the task list
-- Use [`apply_diff`](apply_diff) to update task completion status and add new tasks
-- Use [`write_to_file`](write_to_file) for major updates to the task list structure
-- Use [`ask_followup_question`](ask_followup_question) to request user permission before proceeding to the next task
-- Use appropriate development tools like [`write_to_file`](write_to_file), [`apply_diff`](apply_diff), [`execute_command`](execute_command) for implementing the actual tasks
+- Use [`read_file`](https://kilocode.ai/docs/features/tools/read-file) to check the current state of the task list
+- Use [`apply_diff`](https://kilocode.ai/docs/features/tools/apply-diff) to update task completion status and add new tasks
+- Use [`write_to_file`](https://kilocode.ai/docs/features/tools/write-to-file) for major updates to the task list structure
+- Use [`ask_followup_question`](https://kilocode.ai/docs/features/tools/ask-followup-question) to request user permission before proceeding to the next task
+- Use appropriate development tools like [`write_to_file`](https://kilocode.ai/docs/features/tools/write-to-file), [`apply_diff`](https://kilocode.ai/docs/features/tools/apply-diff), [`execute_command`](https://kilocode.ai/docs/features/tools/execute-command) for implementing the actual tasks
 
 ## Implementation Workflow
 

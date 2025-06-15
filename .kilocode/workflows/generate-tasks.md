@@ -13,13 +13,13 @@ To guide an AI assistant in creating a detailed, step-by-step task list in Markd
 ## Process
 
 1. **Receive PRD Reference:** The user points the AI to a specific PRD file
-2. **Analyze PRD:** The AI reads and analyzes the functional requirements, user stories, and other sections of the specified PRD using the [`read_file`](read_file) tool.
+2. **Analyze PRD:** The AI reads and analyzes the functional requirements, user stories, and other sections of the specified PRD using the [`read_file`](https://kilocode.ai/docs/features/tools/read-file) tool.
 3. **Phase 1: Generate Parent Tasks:** Based on the PRD analysis, create the file and generate the main, high-level tasks required to implement the feature. Use your judgement on how many high-level tasks to use. It's likely to be about 5. Present these tasks to the user in the specified format (without sub-tasks yet). Inform the user: "I have generated the high-level tasks based on the PRD. Ready to generate the sub-tasks? Respond with 'Go' to proceed."
 4. **Wait for Confirmation:** Pause and wait for the user to respond with "Go".
 5. **Phase 2: Generate Sub-Tasks:** Once the user confirms, break down each parent task into smaller, actionable sub-tasks necessary to complete the parent task. Ensure sub-tasks logically follow from the parent task and cover the implementation details implied by the PRD.
 6. **Identify Relevant Files:** Based on the tasks and PRD, identify potential files that will need to be created or modified. List these under the `Relevant Files` section, including corresponding test files if applicable.
 7. **Generate Final Output:** Combine the parent tasks, sub-tasks, relevant files, and notes into the final Markdown structure.
-8. **Save Task List:** Save the generated document in the `/tasks/` directory with the filename `tasks-[prd-file-name].md`, where `[prd-file-name]` matches the base name of the input PRD file (e.g., if the input was `prd-user-profile-editing.md`, the output is `tasks-prd-user-profile-editing.md`) using the [`write_to_file`](write_to_file) tool.
+8. **Save Task List:** Save the generated document in the `/tasks/` directory with the filename `tasks-[prd-file-name].md`, where `[prd-file-name]` matches the base name of the input PRD file (e.g., if the input was `prd-user-profile-editing.md`, the output is `tasks-prd-user-profile-editing.md`) using the [`write_to_file`](https://kilocode.ai/docs/features/tools/write-to-file) tool.
 
 ## Output Format
 
@@ -60,16 +60,16 @@ Assume the primary reader of the task list is a **junior developer** who will im
 
 ## Kilocode Tools to Use
 
-- Use [`read_file`](read_file) to analyze the PRD file
-- Use [`write_to_file`](write_to_file) to save the task list document
-- Use [`list_files`](list_files) if you need to explore the project structure for file path suggestions
-- Use [`search_files`](search_files) if you need to find existing patterns or similar implementations in the codebase
+- Use [`read_file`](https://kilocode.ai/docs/features/tools/read-file) to analyze the PRD file
+- Use [`write_to_file`](https://kilocode.ai/docs/features/tools/write-to-file) to save the task list document
+- Use [`list_files`](https://kilocode.ai/docs/features/tools/list-files) if you need to explore the project structure for file path suggestions
+- Use [`search_files`](https://kilocode.ai/docs/features/tools/search-files) if you need to find existing patterns or similar implementations in the codebase
 
 ## Implementation Steps
 
-1. Read the specified PRD file using [`read_file`](read_file)
+1. Read the specified PRD file using [`read_file`](https://kilocode.ai/docs/features/tools/read-file)
 2. Analyze the functional requirements and user stories
-3. Generate high-level parent tasks and save initial version using [`write_to_file`](write_to_file)
+3. Generate high-level parent tasks and save initial version using [`write_to_file`](https://kilocode.ai/docs/features/tools/write-to-file)
 4. Wait for user confirmation ("Go")
-5. Generate detailed sub-tasks and update the file using [`apply_diff`](apply_diff) or [`write_to_file`](write_to_file)
+5. Generate detailed sub-tasks and update the file using [`apply_diff`](https://kilocode.ai/docs/features/tools/apply-diff) or [`write_to_file`](https://kilocode.ai/docs/features/tools/write-to-file)
 6. Identify and list relevant files that will need to be created or modified
