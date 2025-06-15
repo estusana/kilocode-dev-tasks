@@ -36,7 +36,7 @@ You can create a lightweight PRD directly within Kilocode:
    Here's the feature I want to build: [Describe your feature in detail]
    ```
 
-   The AI will use Kilocode's [`ask_followup_question`](ask_followup_question) tool to gather clarifying information and then create the PRD using [`write_to_file`](write_to_file).
+   The AI will use Kilocode's [`ask_followup_question`](https://kilocode.ai/docs/features/tools/ask-followup-question) tool to gather clarifying information and then create the PRD using [`write_to_file`](https://kilocode.ai/docs/features/tools/write-to-file).
 
 ### 2️⃣ Generate Your Task List from the PRD
 
@@ -49,7 +49,7 @@ With your PRD drafted (e.g., `prd-my-feature.md`), the next step is to generate 
    Please use the generate-tasks workflow to create a task list from my PRD file: prd-my-feature.md
    ```
 
-   The AI will use [`read_file`](read_file) to analyze your PRD and create a comprehensive task list using [`write_to_file`](write_to_file).
+   The AI will use [`read_file`](https://kilocode.ai/docs/features/tools/read-file) to analyze your PRD and create a comprehensive task list using [`write_to_file`](https://kilocode.ai/docs/features/tools/write-to-file).
 
 ### 3️⃣ Examine Your Task List
 
@@ -74,9 +74,9 @@ To ensure methodical progress and allow for verification, reference the [`proces
 
    The AI will:
 
-   - Use [`read_file`](read_file) to check the current task list
+   - Use [`read_file`](https://kilocode.ai/docs/features/tools/read-file) to check the current task list
    - Implement the specific sub-task using appropriate tools
-   - Update the task list using [`apply_diff`](apply_diff)
+   - Update the task list using [`apply_diff`](https://kilocode.ai/docs/features/tools/apply-diff)
    - Ask for your approval before proceeding
 
 ### 5️⃣ Review, Approve, and Progress ✅
@@ -88,13 +88,13 @@ As the AI completes each task, you review the changes.
 
 You'll see a satisfying list of completed items grow, providing a clear visual of your feature coming to life!
 
-The AI will use Kilocode's tools like [`write_to_file`](write_to_file), [`apply_diff`](apply_diff), [`execute_command`](execute_command), and others to implement your features systematically.
+The AI will use Kilocode's tools like [`write_to_file`](https://kilocode.ai/docs/features/tools/write-to-file), [`apply_diff`](https://kilocode.ai/docs/features/tools/apply-diff), [`execute_command`](https://kilocode.ai/docs/features/tools/execute-command), and others to implement your features systematically.
 
 ## 🗂️ Files in this Repository
 
-- **[`create-prd.md`](.kilocode/workflows/create-prd.md)**: Guides the AI in generating a Product Requirement Document for your feature using Kilocode's [`ask_followup_question`](ask_followup_question) and [`write_to_file`](write_to_file) tools.
-- **[`generate-tasks.md`](.kilocode/workflows/generate-tasks.md)**: Takes a PRD markdown file as input and helps the AI break it down into a detailed, step-by-step implementation task list using [`read_file`](read_file) and [`write_to_file`](write_to_file).
-- **[`process-task.md`](.kilocode/workflows/process-task.md)**: Instructs the AI on how to process the generated task list, tackling one task at a time and waiting for your approval before proceeding. Uses [`read_file`](read_file), [`apply_diff`](apply_diff), and [`ask_followup_question`](ask_followup_question) for systematic progress.
+- **[`create-prd.md`](.kilocode/workflows/create-prd.md)**: Guides the AI in generating a Product Requirement Document for your feature using Kilocode's [`ask_followup_question`](https://kilocode.ai/docs/features/tools/ask-followup-question) and [`write_to_file`](https://kilocode.ai/docs/features/tools/write-to-file) tools.
+- **[`generate-tasks.md`](.kilocode/workflows/generate-tasks.md)**: Takes a PRD markdown file as input and helps the AI break it down into a detailed, step-by-step implementation task list using [`read_file`](https://kilocode.ai/docs/features/tools/read-file) and [`write_to_file`](https://kilocode.ai/docs/features/tools/write-to-file).
+- **[`process-task.md`](.kilocode/workflows/process-task.md)**: Instructs the AI on how to process the generated task list, tackling one task at a time and waiting for your approval before proceeding. Uses [`read_file`](https://kilocode.ai/docs/features/tools/read-file), [`apply_diff`](https://kilocode.ai/docs/features/tools/apply-diff), and [`ask_followup_question`](https://kilocode.ai/docs/features/tools/ask-followup-question) for systematic progress.
 
 ## 🌟 Benefits
 
@@ -119,20 +119,20 @@ The AI will use Kilocode's tools like [`write_to_file`](write_to_file), [`apply_
 - **Leverage Kilocode Tools:** The workflows are designed to work with Kilocode's comprehensive tool set including file operations, command execution, and interactive questioning.
 - **Correct File References:** Always ensure you're accurately referencing the PRD filename when generating tasks.
 - **Patience and Iteration:** AI is a powerful tool, but it's not magic. Be prepared to guide, correct, and iterate. This workflow is designed to make that iteration process smoother.
-- **Use Kilocode's Capabilities:** Take advantage of features like [`browser_action`](browser_action) for testing web applications, [`execute_command`](execute_command) for running tests, and [`search_files`](search_files) for code exploration.
+- **Use Kilocode's Capabilities:** Take advantage of features like [`browser_action`](https://kilocode.ai/docs/features/tools/browser-action) for testing web applications, [`execute_command`](https://kilocode.ai/docs/features/tools/execute-command) for running tests, and [`search_files`](https://kilocode.ai/docs/features/tools/search-files) for code exploration.
 
 ## 🔧 Kilocode Tools Used
 
 These workflows leverage Kilocode's powerful tool ecosystem:
 
-- **[`read_file`](read_file)**: For analyzing PRDs and checking task progress
-- **[`write_to_file`](write_to_file)**: For creating PRDs, task lists, and implementation files
-- **[`apply_diff`](apply_diff)**: For updating task completion status and making targeted code changes
-- **[`ask_followup_question`](ask_followup_question)**: For gathering requirements and user approval
-- **[`execute_command`](execute_command)**: For running tests, builds, and other development commands
-- **[`search_files`](search_files)**: For exploring existing code patterns and implementations
-- **[`list_files`](list_files)**: For understanding project structure
-- **[`browser_action`](browser_action)**: For testing web applications and user interfaces
+- **[`read_file`](https://kilocode.ai/docs/features/tools/read-file)**: For analyzing PRDs and checking task progress
+- **[`write_to_file`](https://kilocode.ai/docs/features/tools/write-to-file)**: For creating PRDs, task lists, and implementation files
+- **[`apply_diff`](https://kilocode.ai/docs/features/tools/apply-diff)**: For updating task completion status and making targeted code changes
+- **[`ask_followup_question`](https://kilocode.ai/docs/features/tools/ask-followup-question)**: For gathering requirements and user approval
+- **[`execute_command`](https://kilocode.ai/docs/features/tools/execute-command)**: For running tests, builds, and other development commands
+- **[`search_files`](https://kilocode.ai/docs/features/tools/search-files)**: For exploring existing code patterns and implementations
+- **[`list_files`](https://kilocode.ai/docs/features/tools/list-files)**: For understanding project structure
+- **[`browser_action`](https://kilocode.ai/docs/features/tools/browser-action)**: For testing web applications and user interfaces
 
 ## 🤝 Contributing
 
